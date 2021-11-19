@@ -16,7 +16,7 @@ describe('Testes na rota cadastrar usuário', () => {
         RegisterUser.validarComponentes()
     })
 
-    it.only('Deve cadastrar um usuário', () => {
+    it('Deve cadastrar um usuário', () => {
         RegisterUser.cadastrarUsuarioValido()
     })
 

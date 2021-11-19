@@ -25,7 +25,7 @@ describe('Testes na rota login', () => {
         Login.validarCompAbaLogin()
     })
 
-    it.only('Deve logar com usuário válido', () => {
+    it('Deve logar com usuário válido', () => {
         Login.acessarRotaLogin()
         Login.clicaBtnLogar()
         Login.logar()

@@ -47,3 +47,7 @@ export const REGISTER_ADRESS = {
 
     BTN_EDITAR   : '.app__button--no-margin',
 }
+
+export const ADD_TO_CART = {
+    BTN_ACESSAR_LOJA : '.app__link--featured'
+}
