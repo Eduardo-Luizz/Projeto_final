@@ -11,6 +11,7 @@ export default class AddToCart extends Base {
     }
 
     static clicarBtnLoja(){
-        super.clickOnElement(ADDC.BTN_ACESSAR_LOJA)
+        super.getElementContaining('Login').click();
+        //super.clickOnElement(ADDC.BTN_ACESSAR_LOJA)
     }
 }

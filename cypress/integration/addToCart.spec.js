@@ -11,6 +11,6 @@ describe('Testes na rota adicionar produtos ao carrinho', () => {
         Login.clicaBtnLogar()
         Login.logar()
         AddToCart.validarUrl()
-        AddToCart.clicarBtnLoja()
+        //AddToCart.clicarBtnLoja()
     })
 })
