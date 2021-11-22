@@ -42,7 +42,6 @@ export default class EditAddres extends Base {
             cy.wait('@teste')
             super.typeValue(RG.INP_NUM, end.endValido.numero)
             super.typeValue(RG.INP_COMP, end.endValido.complemento)
-            super.getElementContaining('Salvar alterações').click()
         })
     }
 
@@ -55,5 +54,30 @@ export default class EditAddres extends Base {
             super.getElementContaining(end.endValido.numero)
             super.getElement(RG.MSG_SUCESSO).should('contain', 'Sucesso!').and('contain', 'Seus dados foram atualizados.')
         })
+    }
+
+    static validarSeBotaoEstaDesbilitado(){
+        super.getElement(RG.BTN_EDITAR).should('be.disabled')
+    }
+
+    static preencherEnderecoEComplemento(){
+        cy.readFile('cypress/fixtures/endereco.json').then(end => {
+            super.getElement(RG.INP_END).clear()
+            super.getElement(RG.INP_CEP).clear()
+            super.getElement(RG.INP_NUM).clear()
+            super.getElement(RG.INP_COMP).clear()
+            super.typeValue(RG.INP_END, end.endValido.endereco)
+            super.typeValue(RG.INP_COMP, end.endValido.complemento)
+        })
+    }
+
+    static clicarBtnSalvar(){
+        super.getElementContaining('Salvar alterações').click()
+    }
+
+    static validarMsgErro(){
+        super.getElementContaining(`Informe o CEP.`)
+        super.getElementContaining(`Informe o número (Use "s/n" caso não tenha número).`)
+        super.getElementContaining(`O endereço não foi salvo! Tente novamente em alguns instantes.`)
     }
 }

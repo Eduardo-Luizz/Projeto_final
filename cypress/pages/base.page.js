@@ -32,7 +32,7 @@ export default class Base {
 
   static validateElementText(element, value, index = undefined) {
     this.getElementText(element, index).then((text) => {
-      expect(text).to.contains(value);
+      expect(text).to.contains(value).and.be.visible;
     });
   }
 
@@ -44,7 +44,7 @@ export default class Base {
     if (force === true) {
       this.getElement(element).type(value, { force: true });
     } else {
-      this.getElement(element).clear().type(value);
+      this.getElement(element).type(value);
     }
   }
 
@@ -106,5 +106,9 @@ export default class Base {
 
   static getElementContainsClick(text){
     return cy.contains(text, {matchCase: false}).click()
+  }
+
+  static validateDivText(element, text){
+    cy.get(element).should('contain', text).and('be.visible')
   }
 }

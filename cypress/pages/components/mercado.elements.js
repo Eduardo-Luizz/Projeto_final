@@ -91,4 +91,8 @@ export const CHECKOUT = {
     BTN_CEP           : '#btnFindAddress',
     INP_NUM2          : '#customer-address-number',
     BTN_SAVE          : '.btn-cart-form',
+
+    DIV_INF_PESSOAIS  : '[data-checkout-template=customer]',
+    DIV_INF_EMAIL     : '.ch-customer-email',
+    DIV_NOME          : '#customer-profile-label'
 }

@@ -2,7 +2,7 @@ import Login from '../pages/login.page'
 import AddToCart from '../pages/addToCart.page'
 import Checkout from '../pages/checkout.page'
 
-describe('Testes na rota checkout', () => {
+describe('Testes positivos na rota checkout', () => {
     beforeEach(() => {
         Login.acessarMercado()
         Login.acessarRotaLogin()
@@ -19,7 +19,7 @@ describe('Testes na rota checkout', () => {
         Checkout.validarUrl()
     })
 
-    it.only('Deve preencher checkout', () => {
+    it('Deve preencher checkout e validar os dados pessoais', () => {
         AddToCart.clicarBtnLoja()
         AddToCart.clicarAdcProduto3()
         AddToCart.clicarBtnCarrinho()
@@ -28,10 +28,26 @@ describe('Testes na rota checkout', () => {
         Checkout.preencherCheckout()
         Checkout.preencherSenha()
         Checkout.clicBtnCont()
-        Checkout.preencherCep()
-        Checkout.clicarBtnPreencherCep()
-        Checkout.preencherNumero()
-        Checkout.clicarBtnSalvarDados()
+        Checkout.validarDadosPessoais()
     })
     
+})
+
+describe('Testes negativos na rota na rota checkout', () => {
+    beforeEach(() => {
+        Login.acessarMercado()
+        Login.acessarRotaLogin()
+        Login.clicaBtnLogar()
+        Login.logar()
+    })
+
+    it('Deve preencher checkout com email inválido e verificar mensagem de erro', () => {
+        AddToCart.clicarBtnLoja()
+        AddToCart.clicarAdcProduto3()
+        AddToCart.clicarBtnCarrinho()
+        AddToCart.finalizarPedido()
+        Checkout.clicarBtnContinuar()
+        Checkout.preencherEmailInvalido()
+        Checkout.validarMsgDeError()
+    })
 })
