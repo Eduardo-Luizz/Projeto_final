@@ -42,12 +42,47 @@ export const LOGIN = {
 }
 
 export const REGISTER_ADRESS = {
-    TXT_NAME     : '.app__address-list__item__text__customer-name',
-    TXT_PRINCIPAL: '.app__badge',
+    TXT_NAME            : '.app__address-list__item__text__customer-name',
+    TXT_PRINCIPAL       : '.app__badge',
 
-    BTN_EDITAR   : '.app__button--no-margin',
+    BTN_EDITAR          : '.app__button--no-margin',
+    INP_END             : '#address-description',
+    INP_CEP             : '#address-cep',
+    INP_NUM 	        : '#address-number',
+    INP_COMP            : '#address-complement', 
+    
+    MSG_SUCESSO         : '.alert-success'
 }
 
 export const ADD_TO_CART = {
-    BTN_ACESSAR_LOJA : '.app__link--featured'
+    BTN_ACESSAR_LOJA : '.app__link--featured',
+    BTN_ADC_1        : '[data-app*=buy-button]:visible',
+    BTN_ADC_ARROZ    : '#qtd27:visible',
+
+    BTN_CARRINHO     : '[data-tray-tst="link_qtde_carrinho"]',
+    TXT_ARROZ        : '.product-title-name',
+    EXC_PRODUTO      : '.prod-delete',
+
+    TXT_VALOR        : '.subtotal-price',
+
+    BTN_ADC          : '[data-action=plus]:visible',
+    BTN_CAR_QTD      : '.form-control',
+
+    TXT_PRICE        : '.ch-cart-product-price',
+    TXT_VALUE        : '.ch-cart-product-price-unit',
+}
+
+export const CHECKOUT = {
+
+    INP_USER         : '#login-email',
+    BTN_CONTINUAR    : '#login-action',
+    QLQ              : '[class*=secret-answer]',
+    INP_SENHA        : '#input-password',
+
+    BTN_CONTINUAR2    : '#password-submit',
+
+    INP_CEP           : '#customer-address-zipcode',
+    BTN_CEP           : '#btnFindAddress',
+    INP_NUM2          : '#customer-address-number',
+    BTN_SAVE          : '.btn-cart-form',
 }

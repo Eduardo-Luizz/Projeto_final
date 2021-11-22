@@ -11,7 +11,50 @@ export default class AddToCart extends Base {
     }
 
     static clicarBtnLoja(){
-        super.getElementContaining('Login').click();
-        //super.clickOnElement(ADDC.BTN_ACESSAR_LOJA)
+        super.clickOnElement(ADDC.BTN_ACESSAR_LOJA)
     }
+
+    static clicarAdcProduto(){
+        super.getElement(ADDC.BTN_ADC_1 ,1).click()
+        super.getElement(ADDC.BTN_ADC).click()
+    }
+
+    static clicarAdcProduto2() {
+        super.getElement(ADDC.BTN_ADC_1 ,2).click()
+        super.getElement(ADDC.BTN_ADC).click()
+    }
+
+    static clicarAdcProduto3(){
+        super.getElement(ADDC.BTN_ADC_1 ,3).click()
+        super.getElement(ADDC.BTN_ADC).click()
+    }
+
+    static validandoQtd(){
+        super.getElement(ADDC.BTN_ADC_ARROZ).should('have.value', 2)
+    }
+
+    static clicarBtnCarrinho(){
+        super.clickOnElement(ADDC.BTN_CARRINHO)
+    }
+
+    static validandoSeOsComponentesEstaoVisiveis(){
+        super.verifyIfElementIsVisible(ADDC.TXT_ARROZ)
+        super.getElementContaining('Quantidade: 2')
+        super.getElementContaining('R$ 12.00')
+        super.verifyIfElementIsVisible(ADDC.EXC_PRODUTO)
+        super.getElement(ADDC.TXT_VALOR).should('contain', '24,00')
+    }
+
+    static finalizarPedido(){
+        super.getElementContaining('Finalizar pedido').click({ force: true})
+    }
+
+    static validarItemNoCarrinho(){
+        super.getElementContaining(`ÓLEO DE GIRASSOL TIPO 1 LIZA`)
+        super.getElementContaining(`Marca: Cargill Brasil`)
+        super.getElement(ADDC.BTN_CAR_QTD, 0).should('have.value', 2)
+        super.getElement(ADDC.TXT_PRICE, 0).should('contain', 'R$ 24,00')
+        super.getElement(ADDC.TXT_VALUE, 0).should('contain', '(R$ 12,00 cada)')
+    }
+
 }

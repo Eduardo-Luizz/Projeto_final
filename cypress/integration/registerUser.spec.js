@@ -1,7 +1,7 @@
 
-import RegisterUser from '../pages/MercadoRegisterUser.page'
+import RegisterUser from '../pages/registerUser.page'
 
-describe('Testes na rota cadastrar usuário', () => {
+describe('Testes positivos na rota cadastrar usuário', () => {
 
     beforeEach(() => {
         RegisterUser.acessarMercado()
@@ -16,8 +16,19 @@ describe('Testes na rota cadastrar usuário', () => {
         RegisterUser.validarComponentes()
     })
 
-    it('Deve cadastrar um usuário', () => {
+    it('Deve cadastrar um usuário e validar mensagens de sucesso e url', () => {
         RegisterUser.cadastrarUsuarioValido()
+        RegisterUser.validarMsg()
+        RegisterUser.validarRedirecionamento()
+    })
+})
+
+describe('Testes negativos na rota cadastrar usuário', () => {
+
+    beforeEach(() => {
+        RegisterUser.acessarMercado()
+        RegisterUser.acessarRotaCadastro()
     })
 
+    
 })

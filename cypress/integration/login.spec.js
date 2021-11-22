@@ -1,7 +1,7 @@
 
 import Login from '../pages/login.page'
 
-describe('Testes na rota login', () => {
+describe('Testes positivos na rota login', () => {
     beforeEach(() =>{
         Login.acessarMercado()
     })
@@ -25,10 +25,31 @@ describe('Testes na rota login', () => {
         Login.validarCompAbaLogin()
     })
 
-    it.only('Deve logar com usuário válido', () => {
+    it('Deve logar com usuário válido e validar os dados pessoais', () => {
         Login.acessarRotaLogin()
         Login.clicaBtnLogar()
         Login.logar()
+        Login.validarDadosPessoais()
+    })
+})
+
+describe('Testes negativos na rota login', () => {
+    beforeEach(() =>{
+        Login.acessarMercado()
+    })
+
+    it('Deve tentar logar com um cpf que não foi criado e validar a mensagem de erro', () => {
+        Login.acessarRotaLogin()
+        Login.clicaBtnLogar()
+        Login.logarInvalido()
+        Login.validarMsgErroNoUser()
+    })
+
+    it('Deve tentar logar com senha inválida e validar mensagem de erro', () => {
+        Login.acessarRotaLogin()
+        Login.clicaBtnLogar()
+        Login.logarSenhaInvalida()
+        Login.validarMsgErroSenha()
     })
 })
 

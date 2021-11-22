@@ -44,7 +44,7 @@ export default class Base {
     if (force === true) {
       this.getElement(element).type(value, { force: true });
     } else {
-      this.getElement(element).type(value);
+      this.getElement(element).clear().type(value);
     }
   }
 
@@ -85,7 +85,7 @@ export default class Base {
   }
 
   static validateUrl(url){
-    cy.url().should('include', url)
+    cy.url().should('include', url, { timeout: 10000})
   }
 
   //------------------------------------------------------

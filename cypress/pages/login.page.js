@@ -42,7 +42,46 @@ export default class Login extends Base {
             super.clickOnElement(LG.BTN_CONTINUAR)
             super.typeValue(LG.INP_PASSWORD, user.senha)
             super.clickOnElement(LG.BTN_PASS_SUBMIT)
-            //super.validateText(user.nomeCompleto, user.nomeCompleto)
         })     
+    }
+
+    static validarDadosPessoais(){
+        cy.readFile('cypress/fixtures/user.json').then(user =>{
+            var telCel = user.telCel
+            var telCel = telCel.substring(0,0) + '(' + telCel.substring(0,2) + ') ' + telCel.substring(2,7) + '-' + telCel.substring(7)
+            super.getElementContaining(`Nome completo ${user.nomeCompleto}`)
+            super.getElementContaining(`E-mail ${user.email}`)
+            super.getElementContaining(`CPF ${user.cpf}`)
+            super.getElementContaining(`Data de nascimento ${user.dataNasc}`)
+            super.getElementContaining(`Telefone celular ${telCel}`)
+        })
+    }
+
+    static validarNome(){
+        cy.readFile('cypress/fixtures/user.json').then(name =>{
+            super.getElementContaining(`Olá ${name.nomeCompleto}`)
+        })
+    }
+
+    static logarInvalido(){
+        super.typeValue(LG.INP_EMAIL, `01236578900`)
+        super.clickOnElement(LG.BTN_CONTINUAR)
+    }
+
+    static validarMsgErroNoUser(){
+        super.getElementContaining(`Dados inválidos, digite novamente!`)
+    }
+
+    static logarSenhaInvalida(){
+        cy.readFile('cypress/fixtures/user.json').then(user => {
+            super.typeValue(LG.INP_EMAIL, user.cpf)
+            super.clickOnElement(LG.BTN_CONTINUAR)
+            super.typeValue(LG.INP_PASSWORD, 125487)
+            super.clickOnElement(LG.BTN_PASS_SUBMIT)
+        })
+    }
+
+    static validarMsgErroSenha(){
+        super.getElementContaining(`Autenticação incorreta.`)
     }
 }

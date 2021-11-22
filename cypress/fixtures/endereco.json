@@ -2,10 +2,8 @@
     "endValido": {
         "endereco": "OsvaldoAranha",
         "cep": "04302021",
-        "rua": "Av.OsvaldoAranha",
-        "numero": "111",
-        "complemento": "Casa com cerca branca",
-        "bairro": "Centro"
+        "numero": "s/n",
+        "complemento": "Casa com cerca branca"
     }
 
 }

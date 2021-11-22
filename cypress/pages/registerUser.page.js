@@ -7,7 +7,7 @@ import faker from 'faker';
 const { fakerBr } = require('js-brasil');
 
 import Base from './base.page';
-import {REGISTER_USER as RU} from '../pages/components/mercado.elements'
+import {REGISTER_USER as RU} from './components/mercado.elements'
 
 
 export default class RegisterUser extends Base {
@@ -61,5 +61,18 @@ export default class RegisterUser extends Base {
             super.verifyIfElementExists(RU.BTN_AVANCAR)
             super.clickOnElement(RU.BTN_AVANCAR)
         })
+    }
+
+    static validarMsg(){
+        cy.readFile('cypress/fixtures/user.json').then(user => {
+            super.getElementContaining(`Prezado Sr(a) ${user.nomeCompleto}`)
+            super.getElementContaining(`Seu cadastro foi efetuado com sucesso!`)
+            super.getElementContaining(`Estamos direcionando para a página inicial.`)
+            super.getElementContaining(`Aguarde alguns instantes...`)
+        })
+    }
+
+    static validarRedirecionamento(){
+        super.validateUrl('/loja/loja.php?loja=')
     }
 }
