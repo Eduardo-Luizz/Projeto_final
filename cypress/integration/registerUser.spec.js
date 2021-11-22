@@ -30,5 +30,14 @@ describe('Testes negativos na rota cadastrar usuário', () => {
         RegisterUser.acessarRotaCadastro()
     })
 
-    
+    it('Deve tentar cadastrar um usuário sem preencher nome e validar mensagem de erro', () => {
+        RegisterUser.clicarBtnAvancar()
+        RegisterUser.validarMsgErro(`Digite o seu nome completo, por favor.`)
+    })
+
+    it('Deve tentar cadastrar um usuário sem preencher cpf e validar mensagem de erro', () => {
+        RegisterUser.preencherDadosAleatorios()
+        RegisterUser.clicarBtnAvancar()
+        RegisterUser.validarMsgErro(`Para prosseguir com o cadastro, por favor, informe um CPF`)
+    })
 })

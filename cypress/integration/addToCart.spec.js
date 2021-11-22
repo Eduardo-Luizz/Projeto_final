@@ -1,7 +1,7 @@
 import Login from '../pages/login.page'
 import AddToCart from '../pages/addToCart.page'
 
-describe('Testes na rota adicionar produtos ao carrinho', () => {
+describe('Testes positivos na rota adicionar produtos ao carrinho', () => {
     beforeEach(() => {
         Login.acessarMercado()
         Login.acessarRotaLogin()
@@ -28,5 +28,23 @@ describe('Testes na rota adicionar produtos ao carrinho', () => {
         AddToCart.clicarBtnCarrinho()
         AddToCart.finalizarPedido()
         AddToCart.validarItemNoCarrinho()
+    })
+})
+
+describe('Testes negativos na rota adicionar produtos ao carrinho', () => {
+    beforeEach(() => {
+        Login.acessarMercado()
+        Login.acessarRotaLogin()
+        Login.clicaBtnLogar()
+        Login.logar()
+    })
+
+    it('Deve adicionar produtos ao carrinho e logo após remover validando se a quantidade e valor no carrinho estão vazias', () => {
+        AddToCart.clicarBtnLoja()
+        AddToCart.clicarAdcProdutoTesteNeg()
+        AddToCart.clicarBtnCarrinho()
+        AddToCart.clicarBtnLimparCarrinho()
+        AddToCart.clicarBtnFecharCarrinho()
+        AddToCart.validarQuantidadeEPreco()
     })
 })

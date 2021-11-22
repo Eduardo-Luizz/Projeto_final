@@ -63,6 +63,10 @@ export default class RegisterUser extends Base {
         })
     }
 
+    static clicarBtnAvancar(){
+        super.clickOnElement(RU.BTN_AVANCAR)
+    }
+
     static validarMsg(){
         cy.readFile('cypress/fixtures/user.json').then(user => {
             super.getElementContaining(`Prezado Sr(a) ${user.nomeCompleto}`)
@@ -74,5 +78,15 @@ export default class RegisterUser extends Base {
 
     static validarRedirecionamento(){
         super.validateUrl('/loja/loja.php?loja=')
+    }
+
+    static validarMsgErro(text){
+        super.getElementContaining(text)
+    }
+
+    static preencherDadosAleatorios(){
+        cy.readFile('cypress/fixtures/user.json').then(info => {
+            super.typeValue(RU.INP_NAME, info.nomeCompleto)
+        })
     }
 }

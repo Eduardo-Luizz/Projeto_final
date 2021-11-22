@@ -57,4 +57,27 @@ export default class AddToCart extends Base {
         super.getElement(ADDC.TXT_VALUE, 0).should('contain', '(R$ 12,00 cada)')
     }
 
+    static clicarAdcProdutoTesteNeg(){
+        super.getElement(ADDC.BTN_ADC_1 ,3).click()
+        super.getElement(ADDC.BTN_ADC).click()
+        super.getElement(ADDC.BTN_ADC_1 ,5).click({force: true})
+        super.getElement(ADDC.BTN_ADC_1 ,4).click({force: true})
+        super.getElement(ADDC.BTN_ADC_1 ,2).click({force: true})
+        super.getElement(ADDC.BTN_ADC_1 ,1).click({force: true})
+        super.getElement(ADDC.BTN_ADC_1 ,0).click({force: true})
+    }
+
+    static clicarBtnLimparCarrinho(){
+        super.clickOnElement(ADDC.BTN_LIMPAR_CARRINHO)
+    }
+
+    static clicarBtnFecharCarrinho(){
+        super.clickOnElement(ADDC.BTN_FECHAR)
+    }
+
+    static validarQuantidadeEPreco(){
+        super.getElement(ADDC.IMG_QUANTIDADE).should('contain', '0')
+        super.getElement(ADDC.IMG_PRECO).should('contain', `R$ 0,00`)
+    }
+
 }
