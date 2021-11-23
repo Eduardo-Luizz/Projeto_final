@@ -84,4 +84,16 @@ export default class Login extends Base {
     static validarMsgErroSenha(){
         super.getElementContaining(`Autenticação incorreta.`)
     }
+
+    static validarComponentes(){
+        super.getElementContaining(`Minha conta`)
+        super.getElementContaining(`Meus pedidos`)
+        super.getElementContaining(`Meus dados`)
+        super.getElementContaining(`Meus endereços`)
+        super.getElementContaining(`Avaliação dos produtos`)
+        super.getElementContaining(`Lista de espera`)
+        super.getElementContaining(`Trocas e devoluções`)
+        super.getElementContaining(`Alterar senha`)
+        super.getElementContaining(`Sair`)
+    }
 }
