@@ -1,2 +1,5 @@
 # Projeto_final
-PB_Projeto_Final O comando utilizado para iniciar o cypress é : npm run cy:open, este projeto faz uso das bibliotecas faker.js, fakerBR.js, js-brasil e os reports são gerados por mochawesome.
+
+O comando utilizado para iniciar o cypress é : npm run cy:open, pois este tem um script que não deixa o cypress atualizar automaticamente toda vez que 
+salva uma modificação.
+Este projeto faz uso das bibliotecas faker.js, fakerBR.js, js-brasil e os reports são gerados por mochawesome.
