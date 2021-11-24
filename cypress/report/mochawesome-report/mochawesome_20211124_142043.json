@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-24T17:19:23.936Z",
+    "end": "2021-11-24T17:20:43.584Z",
+    "duration": 79648,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "96e75f67-3c1f-46c3-a2d5-4aa1e42c52b8",
+      "title": "",
+      "fullFile": "cypress/integration/checkout.spec.js",
+      "file": "cypress/integration/checkout.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21558918-7a0b-45bd-86d1-8ed2f5e2e625",
+          "title": "Testes positivos na rota checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve finalizar uma compra e validar a url",
+              "fullTitle": "Testes positivos na rota checkout Deve finalizar uma compra e validar a url",
+              "timedOut": null,
+              "duration": 24093,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_addToCart.default.clicarBtnLoja();\n_addToCart.default.clicarAdcProduto3();\n_addToCart.default.clicarBtnCarrinho();\n_addToCart.default.finalizarPedido();\n_checkout.default.clicarBtnContinuar();\n_checkout.default.validarUrl();",
+              "err": {},
+              "uuid": "0f3a777e-5117-473a-9a9f-a8bc05ee7757",
+              "parentUUID": "21558918-7a0b-45bd-86d1-8ed2f5e2e625",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve preencher checkout e validar os dados pessoais",
+              "fullTitle": "Testes positivos na rota checkout Deve preencher checkout e validar os dados pessoais",
+              "timedOut": null,
+              "duration": 30576,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_addToCart.default.clicarBtnLoja();\n_addToCart.default.clicarAdcProduto3();\n_addToCart.default.clicarBtnCarrinho();\n_addToCart.default.finalizarPedido();\n_checkout.default.clicarBtnContinuar();\n_checkout.default.preencherCheckout();\n_checkout.default.preencherSenha();\n_checkout.default.clicBtnCont();\n_checkout.default.validarDadosPessoais();",
+              "err": {},
+              "uuid": "562c864a-2e37-4e99-a5c4-7ed771bbaad6",
+              "parentUUID": "21558918-7a0b-45bd-86d1-8ed2f5e2e625",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0f3a777e-5117-473a-9a9f-a8bc05ee7757",
+            "562c864a-2e37-4e99-a5c4-7ed771bbaad6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 54669,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "7256f223-31b1-4663-8a2d-ae7fac99e94c",
+          "title": "Testes negativos na rota na rota checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve preencher checkout com email inválido e verificar mensagem de erro",
+              "fullTitle": "Testes negativos na rota na rota checkout Deve preencher checkout com email inválido e verificar mensagem de erro",
+              "timedOut": null,
+              "duration": 22271,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_addToCart.default.clicarBtnLoja();\n_addToCart.default.clicarAdcProduto3();\n_addToCart.default.clicarBtnCarrinho();\n_addToCart.default.finalizarPedido();\n_checkout.default.clicarBtnContinuar();\n_checkout.default.preencherEmailInvalido();\n_checkout.default.validarMsgDeError();",
+              "err": {},
+              "uuid": "85e80167-4dfb-497d-bd95-2e528995774c",
+              "parentUUID": "7256f223-31b1-4663-8a2d-ae7fac99e94c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "85e80167-4dfb-497d-bd95-2e528995774c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22271,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss",
+        "reportTitles": "Projeto Final",
+        "cdn": true,
+        "charts": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-24T17:21:30.593Z",
+    "end": "2021-11-24T17:22:03.321Z",
+    "duration": 32728,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1f982975-92a0-486c-a934-8244f513eaf2",
+      "title": "",
+      "fullFile": "cypress/integration/login.spec.js",
+      "file": "cypress/integration/login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3186dc99-ecdd-4807-8047-f2d4bcf143a9",
+          "title": "Testes positivos na rota login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar a  rota login e validar url",
+              "fullTitle": "Testes positivos na rota login Deve acessar a  rota login e validar url",
+              "timedOut": null,
+              "duration": 3540,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.validarUrl();",
+              "err": {},
+              "uuid": "8760cb4f-7131-4a9e-8e2e-1b13ac144ba7",
+              "parentUUID": "3186dc99-ecdd-4807-8047-f2d4bcf143a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve validar componentes da rota login",
+              "fullTitle": "Testes positivos na rota login Deve validar componentes da rota login",
+              "timedOut": null,
+              "duration": 1790,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.validarMensagens('Já sou cadastrado');\n_login.default.validarMensagens('Informe seu e-mail ou CPF/CNPJ para se autenticar.');\n_login.default.validarSeBtnLoginExiste();",
+              "err": {},
+              "uuid": "4b647cbc-795e-4d84-b361-6daf3fd1204b",
+              "parentUUID": "3186dc99-ecdd-4807-8047-f2d4bcf143a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve validar textos e componentes da janela preencher seu login",
+              "fullTitle": "Testes positivos na rota login Deve validar textos e componentes da janela preencher seu login",
+              "timedOut": null,
+              "duration": 1948,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.clicaBtnLogar();\n_login.default.validarMensagens('Identifique-se');\n_login.default.validarCompAbaLogin();",
+              "err": {},
+              "uuid": "5f2f3827-ef7b-4b7b-8d60-b6c05f92a96f",
+              "parentUUID": "3186dc99-ecdd-4807-8047-f2d4bcf143a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve logar com usuário válido e validar os dados pessoais",
+              "fullTitle": "Testes positivos na rota login Deve logar com usuário válido e validar os dados pessoais",
+              "timedOut": null,
+              "duration": 5921,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.clicaBtnLogar();\n_login.default.logar();\n_login.default.validarDadosPessoais();",
+              "err": {},
+              "uuid": "e3b38c8b-a5ae-45ef-b1d5-0a4dcba5f081",
+              "parentUUID": "3186dc99-ecdd-4807-8047-f2d4bcf143a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve logar com usuário válido e validar os componenetes da página minha conta",
+              "fullTitle": "Testes positivos na rota login Deve logar com usuário válido e validar os componenetes da página minha conta",
+              "timedOut": null,
+              "duration": 6808,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.clicaBtnLogar();\n_login.default.logar();\n_login.default.validarComponentes();",
+              "err": {},
+              "uuid": "473a4d3c-9b11-432d-846c-0409026165a6",
+              "parentUUID": "3186dc99-ecdd-4807-8047-f2d4bcf143a9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8760cb4f-7131-4a9e-8e2e-1b13ac144ba7",
+            "4b647cbc-795e-4d84-b361-6daf3fd1204b",
+            "5f2f3827-ef7b-4b7b-8d60-b6c05f92a96f",
+            "e3b38c8b-a5ae-45ef-b1d5-0a4dcba5f081",
+            "473a4d3c-9b11-432d-846c-0409026165a6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20007,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ea001626-5de0-44d7-85ec-1741ce34bed4",
+          "title": "Testes negativos na rota login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve tentar logar com um cpf que não foi criado e validar a mensagem de erro",
+              "fullTitle": "Testes negativos na rota login Deve tentar logar com um cpf que não foi criado e validar a mensagem de erro",
+              "timedOut": null,
+              "duration": 3672,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.clicaBtnLogar();\n_login.default.logarInvalido();\n_login.default.validarMsgErroNoUser();",
+              "err": {},
+              "uuid": "a8dcd279-46cd-4ba9-b7b1-a7a65fd3936e",
+              "parentUUID": "ea001626-5de0-44d7-85ec-1741ce34bed4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve tentar logar com senha inválida e validar mensagem de erro",
+              "fullTitle": "Testes negativos na rota login Deve tentar logar com senha inválida e validar mensagem de erro",
+              "timedOut": null,
+              "duration": 4048,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.clicaBtnLogar();\n_login.default.logarSenhaInvalida();\n_login.default.validarMsgErroSenha();",
+              "err": {},
+              "uuid": "cafb7473-9b4b-4adf-935d-9dd94b818344",
+              "parentUUID": "ea001626-5de0-44d7-85ec-1741ce34bed4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve tentar logar colocando a senha no lugar do email e validar mensagem",
+              "fullTitle": "Testes negativos na rota login Deve tentar logar colocando a senha no lugar do email e validar mensagem",
+              "timedOut": null,
+              "duration": 2944,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.clicaBtnLogar();\n_login.default.logarSenhaNoEmail();",
+              "err": {},
+              "uuid": "479eafbe-7a04-47e9-ac4e-dd45bcaa5a38",
+              "parentUUID": "ea001626-5de0-44d7-85ec-1741ce34bed4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a8dcd279-46cd-4ba9-b7b1-a7a65fd3936e",
+            "cafb7473-9b4b-4adf-935d-9dd94b818344",
+            "479eafbe-7a04-47e9-ac4e-dd45bcaa5a38"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10664,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss",
+        "reportTitles": "Projeto Final",
+        "cdn": true,
+        "charts": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

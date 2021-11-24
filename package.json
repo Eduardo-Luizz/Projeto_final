@@ -6,14 +6,19 @@
   "scripts": {
     "cy:open": "cypress open --config watchForFileChanges=false",
     "cy:run": "cypress run",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "report:merge": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.json",
+    "report:generate": "marge cypress/report/output.json --reportDir ./ --inline"
   },
   "author": "Eduardo Luiz Zanotto",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.7.0",
     "faker-br": "^0.4.1",
-    "js-brasil": "^2.5.1"
+    "js-brasil": "^2.5.1",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.1"
   },
   "dependencies": {
     "faker": "^5.5.3"

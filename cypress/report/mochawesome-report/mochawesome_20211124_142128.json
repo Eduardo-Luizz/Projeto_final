@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-24T17:20:46.107Z",
+    "end": "2021-11-24T17:21:28.701Z",
+    "duration": 42594,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "894b8908-44da-4b61-bbc8-5bfd0ce40491",
+      "title": "",
+      "fullFile": "cypress/integration/editAddress.spec.js",
+      "file": "cypress/integration/editAddress.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a1e6977c-a5da-4ec9-8022-34eef37b38cb",
+          "title": "Testes positivos na rota cadastro de endereço",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar a rota de cadastro de endereço e validar a URL",
+              "fullTitle": "Testes positivos na rota cadastro de endereço Deve acessar a rota de cadastro de endereço e validar a URL",
+              "timedOut": null,
+              "duration": 7637,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_editAddress.default.clicaBtnMeuEndereco();\n_editAddress.default.validarUrl();",
+              "err": {},
+              "uuid": "009f26e0-783b-4db7-8270-a2474e1971b8",
+              "parentUUID": "a1e6977c-a5da-4ec9-8022-34eef37b38cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve validar componentes na rota de meus endereços",
+              "fullTitle": "Testes positivos na rota cadastro de endereço Deve validar componentes na rota de meus endereços",
+              "timedOut": null,
+              "duration": 6313,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_editAddress.default.clicaBtnMeuEndereco();\n_editAddress.default.validarTextos();",
+              "err": {},
+              "uuid": "3e1fcf58-5450-4c2e-b717-e748ae0ad7a2",
+              "parentUUID": "a1e6977c-a5da-4ec9-8022-34eef37b38cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve preencher o formulário para endereço de entrega e validar o cadastro",
+              "fullTitle": "Testes positivos na rota cadastro de endereço Deve preencher o formulário para endereço de entrega e validar o cadastro",
+              "timedOut": null,
+              "duration": 9933,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_editAddress.default.clicaBtnMeuEndereco();\n_editAddress.default.clicarBtnEditarEnd();\n_editAddress.default.cadastrarEndereco();\n_editAddress.default.clicarBtnSalvar();\n_editAddress.default.validandoEndereco();",
+              "err": {},
+              "uuid": "fa8e456a-5a00-47b7-9bbd-ab268594f2dc",
+              "parentUUID": "a1e6977c-a5da-4ec9-8022-34eef37b38cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "009f26e0-783b-4db7-8270-a2474e1971b8",
+            "3e1fcf58-5450-4c2e-b717-e748ae0ad7a2",
+            "fa8e456a-5a00-47b7-9bbd-ab268594f2dc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23883,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "552eac36-209b-4872-9d7e-95564d939c39",
+          "title": "Testes negativos na rota cadastro de endereço",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar a rota meus endereços sem preencher o formulário validar se o botão de salvar está desabilitado",
+              "fullTitle": "Testes negativos na rota cadastro de endereço Deve acessar a rota meus endereços sem preencher o formulário validar se o botão de salvar está desabilitado",
+              "timedOut": null,
+              "duration": 7233,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_editAddress.default.clicaBtnMeuEndereco();\n_editAddress.default.clicarBtnEditarEnd();\n_editAddress.default.validarSeBotaoEstaDesbilitado();",
+              "err": {},
+              "uuid": "0099dee3-103b-40e3-b64d-8d06215927d3",
+              "parentUUID": "552eac36-209b-4872-9d7e-95564d939c39",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve acessar a rota meus endereços preencher parte do formulário e validar as mensagens de erro",
+              "fullTitle": "Testes negativos na rota cadastro de endereço Deve acessar a rota meus endereços preencher parte do formulário e validar as mensagens de erro",
+              "timedOut": null,
+              "duration": 8920,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_editAddress.default.clicaBtnMeuEndereco();\n_editAddress.default.clicarBtnEditarEnd();\n_editAddress.default.preencherEnderecoEComplemento();\n_editAddress.default.clicarBtnSalvar();\n_editAddress.default.validarMsgErro();",
+              "err": {},
+              "uuid": "e525ac13-ca69-4c79-bb44-e5d8fda6776a",
+              "parentUUID": "552eac36-209b-4872-9d7e-95564d939c39",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0099dee3-103b-40e3-b64d-8d06215927d3",
+            "e525ac13-ca69-4c79-bb44-e5d8fda6776a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16153,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss",
+        "reportTitles": "Projeto Final",
+        "cdn": true,
+        "charts": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

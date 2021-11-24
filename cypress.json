@@ -2,5 +2,18 @@
     "BASE_URL": "https://701523.commercesuite.com.br",
 
     "viewportWidth": 1520,
-    "viewportHeight": 880
+    "viewportHeight": 880,
+    "video": false,
+    "screenShot": false,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "yyyymmdd_HHMMss",
+        "reportTitles": "Projeto Final",
+        "cdn": true,
+        "charts": true
+    }
 }
