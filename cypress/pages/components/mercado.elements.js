@@ -63,7 +63,8 @@ export const ADD_TO_CART = {
     BTN_LIMPAR_CARRINHO: '.btn-clear',
     BTN_FECHAR       : '.btn-close-cart',
     IMG_QUANTIDADE   : '[data-tray-tst=carrinho_qtde]:visible',
-    IMG_PRECO        : '.cart-value'
+    IMG_PRECO        : '.cart-value',
+    BTN_CARR_REMOVER : '.ch-icon.ch-cart-bin'
 }
 
 export const CHECKOUT = {

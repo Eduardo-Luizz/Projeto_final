@@ -67,6 +67,10 @@ export default class AddToCart extends Base {
         super.getElement(ADDC.BTN_ADC_1 ,0).click({force: true})
     }
 
+    static removerProdutoCarrinho(){
+        super.getElement(ADDC.BTN_CARR_REMOVER, 0).click({force: true})
+    }
+
     static clicarBtnLimparCarrinho(){
         super.clickOnElement(ADDC.BTN_LIMPAR_CARRINHO)
     }
@@ -78,6 +82,14 @@ export default class AddToCart extends Base {
     static validarQuantidadeEPreco(){
         super.getElement(ADDC.IMG_QUANTIDADE).should('contain', '0')
         super.getElement(ADDC.IMG_PRECO).should('contain', `R$ 0,00`)
+    }
+
+    static validarMegCarrinhoVazio(){
+        super.getElementContaining(`Seu carrinho está vazio.`)
+    }
+
+    static validarUrlCarrinhoVazio(){
+        super.validateUrl('/checkout/')
     }
 
 }

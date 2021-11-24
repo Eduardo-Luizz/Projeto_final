@@ -96,4 +96,12 @@ export default class Login extends Base {
         super.getElementContaining(`Alterar senha`)
         super.getElementContaining(`Sair`)
     }
+
+    static logarSenhaNoEmail(){
+        cy.readFile('cypress/fixtures/user.json').then(user => {
+            super.typeValue(LG.INP_EMAIL, user.senha)
+            super.clickOnElement(LG.BTN_CONTINUAR)
+            super.getElementContaining(`Dados inválidos, digite novamente!`)
+        })
+    }
 }

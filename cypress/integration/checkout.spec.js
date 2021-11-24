@@ -19,7 +19,7 @@ describe('Testes positivos na rota checkout', () => {
         Checkout.validarUrl()
     })
 
-    it('Deve preencher checkout e validar os dados pessoais', () => {
+    it.only('Deve preencher checkout e validar os dados pessoais', () => {
         AddToCart.clicarBtnLoja()
         AddToCart.clicarAdcProduto3()
         AddToCart.clicarBtnCarrinho()

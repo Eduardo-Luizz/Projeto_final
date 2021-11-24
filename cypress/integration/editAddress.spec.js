@@ -44,7 +44,7 @@ describe('Testes negativos na rota cadastro de endereço', () => {
         EditAddres.validarSeBotaoEstaDesbilitado()
     })
 
-    it('Deve acessar a rota meus endereços preencher o endereço e validar as mensagens de erro', () => {
+    it('Deve acessar a rota meus endereços preencher parte do formulário e validar as mensagens de erro', () => {
         EditAddres.clicaBtnMeuEndereco()
         EditAddres.clicarBtnEditarEnd()
         EditAddres.preencherEnderecoEComplemento()

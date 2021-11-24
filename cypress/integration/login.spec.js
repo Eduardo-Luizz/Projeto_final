@@ -29,7 +29,7 @@ describe('Testes positivos na rota login', () => {
         Login.validarDadosPessoais()
     })
 
-    it.only('Deve logar com usuário válido e validar os componenetes da página minha conta', () => {
+    it('Deve logar com usuário válido e validar os componenetes da página minha conta', () => {
         Login.clicaBtnLogar()
         Login.logar()
         Login.validarComponentes()
@@ -39,20 +39,24 @@ describe('Testes positivos na rota login', () => {
 describe('Testes negativos na rota login', () => {
     beforeEach(() =>{
         Login.acessarMercado()
+        Login.acessarRotaLogin()
     })
 
     it('Deve tentar logar com um cpf que não foi criado e validar a mensagem de erro', () => {
-        Login.acessarRotaLogin()
         Login.clicaBtnLogar()
         Login.logarInvalido()
         Login.validarMsgErroNoUser()
     })
 
     it('Deve tentar logar com senha inválida e validar mensagem de erro', () => {
-        Login.acessarRotaLogin()
         Login.clicaBtnLogar()
         Login.logarSenhaInvalida()
         Login.validarMsgErroSenha()
+    })
+
+    it('Deve tentar logar colocando a senha no lugar do email e validar mensagem', () => {
+        Login.clicaBtnLogar()
+        Login.logarSenhaNoEmail()
     })
 })
 

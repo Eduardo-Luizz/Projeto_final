@@ -8,7 +8,7 @@ describe('Testes positivos na rota cadastrar usuário', () => {
         RegisterUser.acessarRotaCadastro()
     })
 
-    it('Deve validar a Url', () => {
+    it('Deve acessar a rota de cadastro e validar a Url', () => {
         RegisterUser.validarUrl('/cadastro')
     })
 

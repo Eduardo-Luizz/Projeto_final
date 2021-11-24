@@ -24,6 +24,7 @@ export default class Checkout extends Base {
             cy.readFile('cypress/fixtures/endereco.json').then(endereco =>{ // Precisa estar aqui devido a assincronia
                 var botao 
                 cy.get("[data-tray-tst=security_question]").then($securityQuestion => {
+                    
                     if ($securityQuestion.find("p:contains('Quais os primeiros digitos do seu CPF?')").length > 0) {
                         botao = user.cpf.substring(0,6)
 
