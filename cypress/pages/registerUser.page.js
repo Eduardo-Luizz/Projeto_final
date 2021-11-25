@@ -42,7 +42,7 @@ export default class RegisterUser extends Base {
         cy.wait('@wait_loading')
         
     }
-
+//------------------------------------------------------------------------------------------------------
     static cadastrarUsuarioValido(){
         
         //Gerei um usuário por comands
@@ -62,7 +62,7 @@ export default class RegisterUser extends Base {
             super.clickOnElement(RU.BTN_AVANCAR)
         })
     }
-
+//------------------------------------------------------------------------------------------------------
     static clicarBtnAvancar(){
         super.clickOnElement(RU.BTN_AVANCAR)
     }
